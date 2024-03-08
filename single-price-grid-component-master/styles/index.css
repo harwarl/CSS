@@ -1,0 +1,141 @@
+:root {
+  --color-primary-cyan_dark: hsl(179, 59%, 37%);
+  --color-primary-cyan_light: hsl(179, 62%, 43%);
+  --color-primary-yellow: hsl(71, 73%, 54%);
+  --color-neutral-gray: hsl(204, 43%, 93%);
+  --color-neutral-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: Karla;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: var(--color-neutral-blue);
+}
+
+.main {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 45%;
+  border: none;
+}
+
+.bottom__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+section {
+  padding: 30px 40px;
+}
+
+h2,
+h3,
+span {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.2em;
+  /* padding: 5px 0; */
+  color: var(--color-neutral-gray);
+}
+
+h3 {
+  margin: 0px;
+}
+
+span {
+  font-size: 2em;
+  padding-right: 10px;
+}
+
+p {
+  line-height: 130%;
+  text-align: left;
+}
+
+.section__one {
+  background-color: var(--color-neutral-gray);
+  border-radius: 15px 15px 0 0;
+  padding: 30px 40px;
+}
+
+.section__one > h2 {
+  color: var(--color-primary-cyan_dark);
+}
+
+.section__one > h3 {
+  color: var(--color-primary-yellow);
+}
+
+.section__two {
+  background-color: var(--color-primary-cyan_dark);
+  color: var(--color-neutral-gray);
+  border-radius: 0 0 0 15px;
+}
+
+.section__three {
+  background-color: var(--color-primary-cyan_light);
+  color: var(--color-neutral-gray);
+  padding-right: 60px;
+  border-radius: 0 0 15px 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 0;
+  border: 1px solid var(--color-primary-cyan_dark);
+  background-color: var(--color-primary-yellow);
+  border-radius: 5px;
+  color: var(--color-neutral-gray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 866px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin: 25px 0px;
+  }
+
+  section {
+    padding: 0px 40px 20px 40px;
+  }
+
+  p {
+    line-height: 20pt;
+  }
+
+  .section__one {
+    line-height: 130%;
+    padding: 0px 40px 20px 40px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .section__two {
+    border-radius: 0 0 0 0;
+  }
+
+  .section__three {
+    border-radius: 0 0 10px 10px;
+  }
+}
